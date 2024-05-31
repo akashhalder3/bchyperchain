@@ -48,7 +48,6 @@ const defaultTestnetGenesis = `{
   }
 }`
 
-defaultMainnetGenesis
 const defaultMainnetGenesis = `{
   "config": {
     "chainId": 6060, 
