@@ -12,15 +12,15 @@ GOBIN = ./build/bin
 GO ?= latest
 GORUN = env GO111MODULE=on go run
 
-cetd:
+bchyper:
 	$(GORUN) build/ci.go install ./cmd/geth
-	mv $(GOBIN)/geth $(GOBIN)/cetd
+	mv $(GOBIN)/geth $(GOBIN)/bchyper
 	@echo "Done building."
-	@echo "Run \"$(GOBIN)/cetd\" to launch cetd."
+	@echo "Run \"$(GOBIN)/bchyper\" to launch bchyper."
 
 all:
 	$(GORUN) build/ci.go install ./cmd/geth
-	mv $(GOBIN)/geth $(GOBIN)/cetd
+	mv $(GOBIN)/geth $(GOBIN)/bchyper
 
 android:
 	$(GORUN) build/ci.go aar --local

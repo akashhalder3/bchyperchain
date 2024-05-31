@@ -46,7 +46,7 @@ import (
 )
 
 const (
-	clientIdentifier = "cetd" // Client identifier to advertise over the network
+	clientIdentifier = "bchyper" // Client identifier to advertise over the network
 )
 
 var (
@@ -54,7 +54,7 @@ var (
 	gitCommit = ""
 	gitDate   = ""
 	// The app that holds all commands and flags.
-	app = flags.NewApp(gitCommit, gitDate, "the cetd command line interface")
+	app = flags.NewApp(gitCommit, gitDate, "the bchyper command line interface")
 	// flags that configure the node
 	nodeFlags = []cli.Flag{
 		utils.IdentityFlag,
@@ -307,13 +307,13 @@ func prepare(ctx *cli.Context) {
 	// If we're running a known preset, log it for convenience.
 	switch {
 	case ctx.GlobalIsSet(utils.TestnetFlag.Name):
-		log.Info("Starting cetd on testnet...")
+		log.Info("Starting bchyper on testnet...")
 
 	case ctx.GlobalIsSet(utils.DeveloperFlag.Name):
-		log.Info("Starting cetd in ephemeral dev mode...")
+		log.Info("Starting bchyper in ephemeral dev mode...")
 
 	case !ctx.GlobalIsSet(utils.NetworkIdFlag.Name):
-		log.Info("Starting cetd on mainnet...")
+		log.Info("Starting bchyper on mainnet...")
 	}
 	// If we're a full node on mainnet without --cache specified, bump default cache allowance
 	if ctx.GlobalString(utils.SyncModeFlag.Name) != "light" && !ctx.GlobalIsSet(utils.CacheFlag.Name) && !ctx.GlobalIsSet(utils.NetworkIdFlag.Name) {

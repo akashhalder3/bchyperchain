@@ -4,7 +4,7 @@ import (
 	"encoding/json"
 )
 
-const defaultMainnetGenesis = `{
+const defaultTestnetGenesis = `{
   "config": {
     "chainId": 52, 
     "homesteadBlock": 0,
@@ -48,9 +48,10 @@ const defaultMainnetGenesis = `{
   }
 }`
 
-const defaultTestnetGenesis = `{
+defaultMainnetGenesis
+const defaultMainnetGenesis = `{
   "config": {
-    "chainId": 53, 
+    "chainId": 6060, 
     "homesteadBlock": 0,
     "eip150Block": 0,
     "eip150Hash": "0x0000000000000000000000000000000000000000000000000000000000000000",
@@ -81,7 +82,13 @@ const defaultTestnetGenesis = `{
     "0x42eacf5b37540920914589a6b1b5e45d82d0c1ca": {
       "balance": "0"
     },
-    "0x96b4ded06d3447030f82d4722c641171566574df": {
+    "0x93abbc3c2d7c7e878ccb12d5e4240d510dd99c67": {
+      "balance": "0xd92289838d21a9968000000"
+    },
+    "0x3a669dc3370256e379724f18c38ae1949dadf465": {
+      "balance": "0xd92289838d21a9968000000"
+    },
+    "0x69daaadfd23759fa15ef2ec03e3b2f4578adb584": {
       "balance": "0xd92289838d21a9968000000"
     },
     "0x0000000000000000000000000000000000001000": {
