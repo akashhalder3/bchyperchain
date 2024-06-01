@@ -1,0 +1,17 @@
+[Unit]
+Description=BC hyper chain client
+After=syslog.target network.target
+
+[Service]
+User=bthyper
+Group=bthyper
+Type=simple
+ExecStart=/home/bthyper/bchyperchain/build/bin/bchyper --datadir /home/bthyper/.bchyper --config /home/bthyper/testnetconfig/config.toml --unlock "0x47d6687e20826a4d4550276f79d4bc75a26bfe69" --password /home/bthyper/.bchyper/password.txt --mine --allow-insecure-unlock
+KillMode=process
+KillSignal=SIGINT
+TimeoutStopSec=90
+Restart=on-failure
+RestartSec=10s
+
+[Install]
+WantedBy=multi-user.target
